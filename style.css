@@ -1,26 +1,61 @@
-.container {
-          
-            display: flex;
-          
-            flex-wrap: wrap; 
-            margin: 0 auto;
-        }
+/* --- RESET BÁSICO (Teoría: Modelo de Caja) --- */
+* {
+    box-sizing: border-box; /* Fundamental: el padding no aumenta el ancho total */
+}
 
-    
-        .card-container {
-       
-            width: 25%;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
 
-          
-            padding: 10px; 
-        }
+/* --- LAYOUT PRINCIPAL (Teoría: Flexbox Container) --- */
+.main-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las columnas caigan en pantallas pequeñas */
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo para pantallas muy grandes */
+    margin: 0 auto;    /* Centrado horizontal */
+}
 
+/* Estilos generales de columna */
+.columna {
+    padding: 20px;
+}
 
-         .card {
-            background: white;
-            border: 1px solid #ddd;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+/* --- DEFINICIÓN DE ANCHOS (Versión Escritorio) --- */
+.menu {
+    width: 20%;     /* Columna izquierda */
+    background-color: #333;
+    color: white;
+}
+
+.contenido {
+    width: 60%;     /* Columna central (más ancha) */
+    background-color: #ffffff;
+}
+
+.noticias {
+    width: 20%;     /* Columna derecha */
+    background-color: #ddd;
+}
+
+/* --- COMPONENTES INTERNOS --- */
+
+/* Menú */
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #555;
+}
+.menu a:hover {
+    background-color: #555;
+}
 
