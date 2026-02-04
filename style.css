@@ -1,91 +1,177 @@
 * { box-sizing: border-box; }
 
-body {
+body { /*  selector que solo actua sobre el body   */
     font-family: Arial, sans-serif;
     margin: 0;
     background-color: #f0f0f0;
 }
 
 .contenedor-principal {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: flex-start; 
+    display: flex; /*   formato mas flexible a los elementos    */
+    flex-wrap: wrap; /*   desbordamiento controlado de los items    */
+    width: 100%; /*   ancho    */
+    max-width: 1200px; /*    restriccion de X pixeles    */
+    margin: 0 auto; /*   en este caso margen 0 en los laterales    */
+    align-items: flex-start;  /*   alinea els items al inici del contenedor    */
 }
 
-.columna { padding: 20px; }
+.columna { padding: 20px; } /*    espacio de X pixeles entre el contingut i el borde   */
 
 
 .lateral-gris {
-    width: 20%;
-    background-color: #333;
-    color: white;
-    position: sticky;
-    top: 0;
-    height: 100vh; 
+    width: 20%; /*   ancho de este elemento     */
+    background-color: #333;  /*  color de fondo     */
+    color: rgb(254, 254, 254); /*  color de letra del titulo del menu     */
+    position: sticky; /*   que no se mueva aunque bajes     */
+    top: 0; /*   punto de anclaje    */
+    height: 100vh;  /*   Ajusta la altura al 100% de la altura de la ventana    */
 }
 
-.lateral-gris ul { list-style: none; padding: 0; }
+.lateral-gris ul { list-style: none; padding: 0; } /*   elimina marcadores por defecto    */
 .lateral-gris a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    padding: 10px;
-    border-bottom: 1px solid #555;
+    color: rgb(255, 255, 255);  /*    letras del menu   */
+    text-decoration: none; /*   elimina el sutbrallado    */
+    display: block; /*   elemento bloque    */
+    padding: 20px; /*   ancho entre los elementos del menu    */
+    border-bottom: 1px solid #555; /*   aplica un borde de tal color y X pixeles    */
 }
-.lateral-gris a:hover { background-color: #555; }
+.lateral-gris a:hover { background-color: #555; } /*    color del lateral    */
 
 
 .centro-blanco {
-    width: 60%;
-    background-color: #ffffff;
+    width: 60%; /*   anchodel elemento    */
+    background-color: #ffffff; /* color X  */
 }
 
 .derecha-noticias {
-    width: 20%;
-    background-color: #ddd;
+    width: 20%; /*   ancho de X pixeles     */
+    background-color: #ddd; /*   color de fondo     */
 }
 
 
-.cuadricula-fotos { display: flex; flex-wrap: wrap; margin: 0 -5px; }
-.foto-caja { width: 33.33%; padding: 5px; }
+.cuadricula-fotos { display: flex; flex-wrap: wrap; margin: 0 -5px; } /*   organiza las imagenes en filas    */
+.foto-caja { width: 33.33%; padding: 5px; } /*  ancho de columna y padding es separacion de X pixeles     */
 .foto-web {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    width: 100%; /*   ancho total que ocupa ese elemento en el contenedor que es el div    */
+    height: 150px; /*    fija la altura    */
+    border-radius: 4px; /*   curva las esquinas    */
 }
 
 
-.zona-cartas { display: flex; flex-wrap: wrap; margin: 0 -10px; }
-.carta-espacio { width: 50%; padding: 10px; }
+.zona-cartas { display: flex; flex-wrap: wrap; margin: 0 -10px; } /*   quita el margen y alinea    */
+.carta-espacio { width: 50%; padding: 10px; } /*   50 % del ancho     */
 .carta {
-    background-color: white;
+    background-color: white; /*    color de fondo   */
     border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;  /*   curva el borde    */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /*    caracteristicas de la sombra   */
 }
-.carta img { width: 100%; height: 180px; object-fit: cover; }
-.carta-texto { padding: 15px; }
+.carta img { width: 100%; height: 180px; object-fit: cover; } /*    100% del ancho y object sirve para recortar y rellenar sin deformar el ratio   */
+.carta-texto { padding: 15px; } /*   margen de x pixeles    */
 
 
 .bloque-noticia {
-    background: white;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-left: 5px solid #007bff;
-    border-radius: 4px;
+    background: white; /*    color de fondo   */
+    padding: 15px; /*    separacion    */
+    margin-bottom: 15px; /*   separacion    */
+    border-left: 5px solid #007bff; /*   aplica al borde lateral izquierdo de noticia una linea azul    */
+    border-radius: 4px; /*   curva los bordes    */
 }
 
 
 .marco-mapa {
-    width: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin-top: 15px;
+    width: 100%;  /*   100€ del ancho    */
+    border-radius: 10px; /*  radio curvatura del borde en pixeles    */ 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /*    sombra del div   */
+    margin-top: 15px;  /*   margen de separacion al elemento de encima  */
+}
+
+/* media query movil */
+@media (max-width: 390px) { /*   cuando llegues a este minimo de pixeles haz lo siguiente:    */
+    .contenedor-principal {
+        flex-direction: column; /*   pone todos los elementos en filas, mas o menos    */
+    }
+/*   lo que hazen estos elementos es qye     */
+    .lateral-gris {
+        width: 100%; 
+        position: relative;
+        height: auto;
+    }
+
+/*   lo que hazen estos elementos es qye   en el "class" de como cada punto cambie la "amplada"  */
+
+    .centro-blanco {
+        width: 100%;
+    }
+
+    .derecha-noticias {
+        width: 100%;
+    }
+
+    .foto-caja {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .carta-espacio {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .carta {
+        box-shadow: none; /*   le quita la sobmra    */
+    }
+
+    .bloque-noticia {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .marco-mapa {
+        height: 200px;
+    }
+}
+
+/* Media query para iPad Mini */
+@media (max-width: 768px) {
+    .contenedor-principal {
+        flex-direction: column;
+    }
+
+    .lateral-gris {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .centro-blanco {
+        width: 100%;
+    }
+
+    .derecha-noticias {
+        width: 100%;
+    }
+
+    .foto-caja {
+        width: 50%;
+        padding: 5px;
+    }
+
+    .carta-espacio {
+        width: 50%;
+        padding: 10px;
+    }
+
+    .carta {
+        box-shadow: none;
+    }
+
+    .bloque-noticia {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+
+    .marco-mapa {
+        height: 300px;
+    }
 }
