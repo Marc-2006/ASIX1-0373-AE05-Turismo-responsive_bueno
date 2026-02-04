@@ -1,130 +1,79 @@
-* { /*   selector universal  */
-    box-sizing: border-box;
-}
-
-
+* { box-sizing: border-box; }
 
 body {
-    font-family: Arial, sans-serif; /*  tipus de lletra  */
-    margin: 0; /*  cap marge  */
-    padding: 0; /*  augmenta la distancia entre el contingut i els elements  */
+    font-family: Arial, sans-serif;
+    margin: 0;
     background-color: #f0f0f0;
 }
 
-
-.main-wrapper {
+.contenedor-principal {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    align-items: flex-start; /* Necesario para el sticky */
 }
 
-.columna {
-    padding: 20px;
-}
+.columna { padding: 20px; }
 
-
-.menu {
+/* MENU LATERAL FIJO */
+.lateral-gris {
     width: 20%;
     background-color: #333;
     color: white;
+    position: sticky;
+    top: 0;
+    height: 100vh; /* Se queda fijo toda la altura de la pantalla */
 }
 
-.contenido {
-    width: 60%;
-    background-color: #ffffff;
-}
-
-.noticias {
-    width: 20%;
-    background-color: #ddd;
-}
-
-
-.menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.menu a {
+.lateral-gris ul { list-style: none; padding: 0; }
+.lateral-gris a {
     color: white;
     text-decoration: none;
     display: block;
     padding: 10px;
     border-bottom: 1px solid #555;
 }
+.lateral-gris a:hover { background-color: #555; }
 
-.menu a:hover {
-    background-color: #555;
+/* CONTENIDO */
+.centro-blanco {
+    width: 60%;
+    background-color: #ffffff;
 }
 
-
-.galeria_imatges {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -5px;
+.derecha-noticias {
+    width: 20%;
+    background-color: #ddd;
 }
 
-.foto-item {
-    width: 33.33%; /* 3 columnas */
-    padding: 5px;
-}
-
-.img-galeria {
+/* GALERIA */
+.cuadricula-fotos { display: flex; flex-wrap: wrap; margin: 0 -5px; }
+.foto-caja { width: 33.33%; padding: 5px; }
+.foto-web {
     width: 100%;
     height: 150px;
     object-fit: cover;
-    display: block;
     border-radius: 4px;
     border: 1px solid #ccc;
 }
 
-
-.cards-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -10px;
-}
-
-.card-container {
-    width: 50%; 
-    padding: 10px;
-}
-
-.tarjeta-foto {
+/* CARTAS */
+.zona-cartas { display: flex; flex-wrap: wrap; margin: 0 -10px; }
+.carta-espacio { width: 50%; padding: 10px; }
+.carta {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    height: 100%;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+.carta img { width: 100%; height: 180px; object-fit: cover; }
+.carta-texto { padding: 15px; }
 
-.tarjeta-foto img {
-    width: 100%;
-    height: 180px; 
-    object-fit: cover;
-    display: block;
-}
-
-.tarjeta-info {
-    padding: 15px;
-}
-
-.tarjeta-info h3 {
-    margin: 0 0 10px 0;
-    font-size: 1.2em;
-}
-
-.tarjeta-info p {
-    margin: 0;
-    font-size: 0.9em;
-    color: #555;
-}
-
-
-.noticia-item {
+/* NOTICIAS */
+.bloque-noticia {
     background: white;
     padding: 15px;
     margin-bottom: 15px;
@@ -132,14 +81,11 @@ body {
     border-radius: 4px;
 }
 
-/* --- MAPA --- */
-.mapa-placeholder {
+/* MAPA */
+.marco-mapa {
     width: 100%;
-    height: 350px;
-    background-color: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-top: 15px;
 }
-

@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turismo Responsive</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="main-wrapper">
+    <div class="contenedor-principal">
 
-        <nav class="columna menu">
+        <nav class="columna lateral-gris">
             <h3>Menú</h3>
             <ul>
                 <li><a href="#galeria">Galería</a></li>
@@ -23,144 +21,102 @@
             </ul>
         </nav>
 
-        <main class="columna contenido">
+        <main class="columna centro-blanco">
             
-           <section id="galeria">
-    <h2>Galería de Imágenes</h2>
-    <div class="galeria_imatges">
-        <div class="foto-item">
-            <img src="./fotos/central parck.jpg" alt="Descripción" class="img-galeria">
-        </div>
-        <div class="foto-item">
-            <img src="./fotos/empire state.jpg" alt="Descripción" class="img-galeria">
-        </div>
-        <div class="foto-item">
-            <img src="./fotos/estatua de la libertad.jpg" alt="Descripción" class="img-galeria">
-        </div>
-        <div class="foto-item">
-            <img src="./fotos/memorial 11s.jpeg" alt="Descripción" class="img-galeria">
-        </div>
-        <div class="foto-item">
-            <img src="./fotos/puente de brooklyn.jpg" alt="Descripción" class="img-galeria">
-        </div>
-        <div class="foto-item">
-            <img src="./fotos/times square.jpg" alt="Descripción" class="img-galeria">
-        </div>
-    </div>
-    </section>
+            <section id="galeria">
+                <h2>Galería de Imágenes</h2>
+                <div class="cuadricula-fotos">
+                    <div class="foto-caja"><img src="./fotos/central parck.jpg" alt="NY" class="foto-web"></div>
+                    <div class="foto-caja"><img src="./fotos/empire state.jpg" alt="NY" class="foto-web"></div>
+                    <div class="foto-caja"><img src="./fotos/estatua de la libertad.jpg" alt="NY" class="foto-web"></div>
+                    <div class="foto-caja"><img src="./fotos/memorial 11s.jpeg" alt="NY" class="foto-web"></div>
+                    <div class="foto-caja"><img src="./fotos/puente de brooklyn.jpg" alt="NY" class="foto-web"></div>
+                    <div class="foto-caja"><img src="./fotos/times square.jpg" alt="NY" class="foto-web"></div>
+                </div>
+            </section>
             
             <hr>     
 
             <section id="fichas">
-    <h2>Lugares Destacados</h2>
-    <div class="cards-wrapper">
-        
-        <div class="card-container">
-            <div class="tarjeta-foto">
-                <img src="./fotos/vuelo helicoptero.jpg" alt="Vuelo en helicoptero">
-                <div class="tarjeta-info">
-                    <h3>Vuelo en helicoptero</h3>
-                    <p>Visita tambien Manhattan en helicoptero</p>
+                <h2>Lugares Destacados</h2>
+                <div class="zona-cartas">
+                    <div class="carta-espacio">
+                        <div class="carta">
+                            <img src="./fotos/vuelo helicoptero.jpg" alt="Vuelo">
+                            <div class="carta-texto">
+                                <h3>Vuelo en helicóptero</h3>
+                                <p>Visita también Manhattan en helicóptero</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carta-espacio">
+                        <div class="carta">
+                            <img src="./fotos/museo de tecnologia NY.jpg" alt="Museo">
+                            <div class="carta-texto">
+                                <h3>Museo de Arte</h3>
+                                <p>Exposiciones de arte y tecnología</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="card-container">
-            <div class="tarjeta-foto">
-                <img src="./fotos/museo de tecnologia NY.jpg" alt="Museo">
-                <div class="tarjeta-info">
-                    <h3>Museo de Arte</h3>
-                    <p>Exposiciones de arte y tecnologia</p>
-                </div>
-            </div>
-        </div>
-
-        </div>
-</section>
+            </section>
 
             <hr>
 
-<section id="detalles">
-    <h2>Información Útil</h2>
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    Mejor época para visitar Nueva York
-                </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                    La mejor época es durante la <strong>primavera (abril a junio)</strong> o el <strong>otoño (septiembre a noviembre)</strong>, cuando el clima es agradable y Central Park luce sus mejores colores.
+            <section id="detalles">
+                <h2>Información Útil</h2>
+                <div class="accordion accordion-flush" id="acordeonInfo">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#punto1">
+                                Mejor época para visitar Nueva York
+                            </button>
+                        </h2>
+                        <div id="punto1" class="accordion-collapse collapse" data-bs-parent="#acordeonInfo">
+                            <div class="accordion-body">Primavera y otoño son ideales.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#punto2">
+                                Cómo moverse por la ciudad
+                            </button>
+                        </h2>
+                        <div id="punto2" class="accordion-collapse collapse" data-bs-parent="#acordeonInfo">
+                            <div class="accordion-body">El metro es la mejor opción 24h.</div>
+                        </div>
+                    </div>
                 </div>
+            </section>
+        <section id="mapa" class="mt-4">
+            <h2>Ubicación</h2>
+            <div class="marco-mapa">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNueva%20York%2C%20EE.%20UU.!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
             </div>
-        </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    Cómo moverse por la ciudad
-                </button>
-            </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                    El <strong>Metro de Nueva York</strong> es la forma más rápida y económica. Funciona las 24 horas del día. También puedes usar los famosos taxis amarillos o caminar para disfrutar de la arquitectura.
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    Consejos de seguridad y propinas
-                </button>
-            </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                    Nueva York es generalmente segura, pero siempre mantén tus pertenencias a la vista en zonas concurridas. Recuerda que en EE. UU. la propina (tip) suele ser del <strong>18% al 20%</strong> en restaurantes.
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-            <hr>
-            <section id="mapa">
-    <h2>Ubicación</h2>
-    <div class="mapa-contenedor">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d193595.2528082187!2d-74.119763739446!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNueva%20York%2C%20EE.%20UU.!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses" 
-            width="100%" 
-            height="450" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </div>
-</section>
+        </section>
 
         </main>
 
-        <aside class="columna noticias" id="noticias">
+        <aside class="columna derecha-noticias" id="noticias">
             <h3>Últimas Noticias</h3>
-            <div class="noticia-item">
-                <h4>Rodalies inicia la setmana amb talls en 10 trams després de detectar noves deficiències</h4>
-                <p>Els trens de la xarxa de Rodalies de Catalunya circulen aquest dilluns amb incidències en 10 
-                    punts i amb desenes de trams en els quals la velocitat està limitada per problemes a les vies.</p>
+            <div class="bloque-noticia">
+                <h4>Última hora de Rodalies en Catalunya, hoy en directo | Nuevas incidencias y principales líneas afectadas este miércoles</h4>
+                <p>Un tren de la línea R4 de Rodalies descarriló el martes 20 de enero, cuando circulaba en dirección a Manresa, tras chocar contra 
+                    un muro de contención de la AP-7 que había caído sobre la vía entre Gelida y Martorell.</p>
             </div>
-            <div class="noticia-item">
-                <h4>Raphinha té una sobrecàrrega i no jugarà contra l'Albacete a la Copa del Rei</h4>
-                <p>El jugador i capità del FC Barcelona Raphinha no podrà jugar aquest dimarts el 
-                    partit de quarts de final de la Copa del Rei Mapfre contra l'Albacete</p>
+            <div class="bloque-noticia">
+                <h4>Jorge Azcón: “El PSOE confía en que Vox debilite al PP y eso es malo para todos”</h4>
+                <p>El presidente de Aragón y candidato del PP a la reelección, en entrevista con EL PAÍS, no cierra la puerta
+                     a un nuevo Gobierno de coalición con la extrema derecha, aunque cree que los de Abascal “no dan estabilidad”</p>
             </div>
         </aside>
 
     </div>
 
-
-    
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
